@@ -1,0 +1,63 @@
+//gets the servo library
+#include <Servo.h>
+
+//sets up variable servo
+Servo myservo;
+
+//sets initial light level to 0
+int lightlevel = 0;
+
+void setup()
+{
+  //sets up input of light sensor
+  pinMode(A0, INPUT);
+  Serial.begin(9600);
+  
+  //sets up output of two leds
+  pinMode(13, OUTPUT);
+  pinMode(12, OUTPUT);
+  
+  //sets up input for servo
+  myservo.attach(A2);
+}
+
+void loop()
+{
+  //sets variable lightlevel to light sensor input
+  lightlevel = analogRead(A0);
+  
+  //prints lightlevel for debugging purposes
+  Serial.println(lightlevel);
+  
+  //calls blinds on and off depending on lightlevel
+  if(lightlevel > 100)
+  {
+    BlindsOff();    
+  }
+  else if(lightlevel < 100)
+  {
+    BlindsOn()  
+  }
+  
+}
+
+void BlindsOff()
+{   
+    //sets servo to 180 degrees
+    myservo.write(180);  
+  
+    //turns one led on and the other off (leds are for debugging)
+  	digitalWrite(13, HIGH);
+    digitalWrite(12, LOW);  
+}
+
+void BlindsOn()
+{
+    //sets servo to 0 degrees
+    myservo.write(0);   
+    
+    //turns the other leds on and the previous one off
+    digitalWrite(12, HIGH);
+    digitalWrite(13, LOW);
+                  
+} 
