@@ -11,3 +11,4 @@ April 7, 2021 - worked in Tinkercad fiddling with the light sensor in which it t
 April 9, 2021 - worked in Tinkercad simulation to program a servo motor turn based on the light input of a light sensor. I learned a lot about how servos work and put my CS50 skills to use with creating IF statements and calling functions.
 
 April 19, 2021 - researched specifics about Stepper motors as they will most likely work better for my project than a continuos servo because Stepper motors are more powerful, have better precision, etc. Specifically, researched about the L6470 Auto Stepper Motor Driver as well to control a stepper motor. The hard part will be to learn about how to control the stepper motor so that is what i will have to do next time. 
+        - still debating whether or not i will use a continous servo or stepper motr depending on how much force it takes to turn my blinds
