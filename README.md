@@ -12,3 +12,7 @@ April 9, 2021 - worked in Tinkercad simulation to program a servo motor turn bas
 
 April 19, 2021 - researched specifics about Stepper motors as they will most likely work better for my project than a continuos servo because Stepper motors are more powerful, have better precision, etc. Specifically, researched about the L6470 Auto Stepper Motor Driver as well to control a stepper motor. The hard part will be to learn about how to control the stepper motor so that is what i will have to do next time. 
         - still debating whether or not i will use a continous servo or stepper motr depending on how much force it takes to turn my blinds
+
+April 23, 2021 - 3d printed an inital test of a clamp which would connect the motor to my blinds pole. The design was a simple hexagon but ended up being too wide. 
+
+April 25, 2021 - designed a new model for the clamp to connect the motor to the blinds pole. This design is a square with little pegs coming from the flat sides of each edge. I made this design after I got all of my official measurements of the blinds pole. So this one should be a great fit, but im still waiting for it to print.
