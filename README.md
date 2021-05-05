@@ -16,3 +16,7 @@ April 19, 2021 - researched specifics about Stepper motors as they will most lik
 April 23, 2021 - 3d printed an inital test of a clamp which would connect the motor to my blinds pole. The design was a simple hexagon but ended up being too wide. 
 
 April 25, 2021 - designed a new model for the clamp to connect the motor to the blinds pole. This design is a square with little pegs coming from the flat sides of each edge. I made this design after I got all of my official measurements of the blinds pole. So this one should be a great fit, but im still waiting for it to print.
+
+May 3, 2021 - designed and printed a new 3D model to connect the continuos rotation servo bud to the blinds. This design was basically a hollow rectangle (where the blinds pole enters), and a hole at the end of the rectangle (where the servo bud inserts).
+
+May 5, 2021 - I switched to a new and better performing continuos rotation servo, but the bud is smaller than the previous. So i will have to design a new 3D printed connector. Additionally, I worked with a photosensitive resistor light sensor to turn on and off an LED light, to test and understand the sensor. I also learned how to code the continuous rotation servo to turn clockwise for a while, then counter clockwise for a while. Then, I connected the servo to my blinds pole with a makeshift connector and it worked great!
