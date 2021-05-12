@@ -25,4 +25,4 @@ May 7, 2021 - Worked from home, put everything together to have the motor spin f
 
 May 12, 2021 - Started adding the requirments for the AP Submission Portfolio, like the two functions and parameters, and the addition of lists.
 
-[Lets go to Quora](https://www.quora.com)
+
