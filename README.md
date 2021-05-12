@@ -24,3 +24,5 @@ May 5, 2021 - I switched to a new and better performing continuos rotation servo
 May 7, 2021 - Worked from home, put everything together to have the motor spin from the light sensor. I didnt have the blinds pole or connector but I could just see how to was going to work. I also refined the code, etc.
 
 May 12, 2021 - Started adding the requirments for the AP Submission Portfolio, like the two functions and parameters, and the addition of lists.
+
+[Lets go to Quora](https://www.quora.com)
