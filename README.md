@@ -20,3 +20,7 @@ April 25, 2021 - designed a new model for the clamp to connect the motor to the 
 May 3, 2021 - designed and printed a new 3D model to connect the continuos rotation servo bud to the blinds. This design was basically a hollow rectangle (where the blinds pole enters), and a hole at the end of the rectangle (where the servo bud inserts).
 
 May 5, 2021 - I switched to a new and better performing continuos rotation servo, but the bud is smaller than the previous. So i will have to design a new 3D printed connector. Additionally, I worked with a photosensitive resistor light sensor to turn on and off an LED light, to test and understand the sensor. I also learned how to code the continuous rotation servo to turn clockwise for a while, then counter clockwise for a while. Then, I connected the servo to my blinds pole with a makeshift connector and it worked great!
+
+May 7, 2021 - Worked from home, put everything together to have the motor spin from the light sensor. I didnt have the blinds pole or connector but I could just see how to was going to work. I also refined the code, etc.
+
+May 12, 2021 - Started adding the requirments for the AP Submission Portfolio, like the two functions and parameters, and the addition of lists.
