@@ -2,7 +2,7 @@
 //and for param 1 is the light level for Open function
 //and for param 2 is another variable that signifies the percentage the blinds are already on
 
-
+ 
 #include <Servo.h>
 //declare variables
 Servo myservo;
