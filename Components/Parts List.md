@@ -1,0 +1,11 @@
+Components:
+-continuous rotation servo
+-arduino type board
+-breadboard
+-custom 3D printed connector clamp/adapter
+-connecting wires
+-photosensitive resistor
+-resistors
+-mini jumper cables
+-battery pack
+-led lights
