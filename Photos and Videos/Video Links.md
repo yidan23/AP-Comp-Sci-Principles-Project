@@ -9,4 +9,6 @@ I've been having trouble with uploading videos directly into GitHub so here are 
 [May 7, Light Sensor Servo Test](https://streamable.com/kij3l2)
 
 [May 11, Light Sensor Servo Blinds Test FINAL TEST](https://streamable.com/ek9gyl)
+
+As for photos, all of the pictures taken are basically just still images of the content in the videos so I did not include them.
  
