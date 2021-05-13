@@ -53,7 +53,7 @@ void Close()
      myservo.attach(10);
       digitalWrite(ledOpen, LOW);
       digitalWrite(ledClose, HIGH);
-      myservo.write(-180); 
+      myservo.write(180); 
       delay(4000);
       myservo.detach(); 
       isOpen = true;
@@ -64,7 +64,7 @@ void Open()
    myservo.attach(10);
     digitalWrite(ledOpen, HIGH); 
     digitalWrite(ledClose, LOW);
-    myservo.write(180);
+    myservo.write(-180);
     delay(4000);
     myservo.detach();   
     isOpen = false;
