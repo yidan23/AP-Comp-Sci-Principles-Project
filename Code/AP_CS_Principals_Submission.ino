@@ -1,11 +1,9 @@
-#include <Servo.h> //allows use of servo functionalities
-
-//declaring variables
+#include <Servo.h>
 Servo myservo;
-const int lightSensor = A0; //device detecting and receiving the input (which is light/the sun)
-int lightvalue = 0; //this is the input from the light sensor
-int currentState = 0; //this represents the current state of the blinds (ie. 0 = fully closed, 1 = partially open, 2 = fully open)
-int previousValue = 0; // represents the light value before a new light value was registered. This is used in comparison to the new one in the void loop.
+const int lightSensor = A0;//device detecting and receiving the input (which is light/the sun)
+int lightvalue = 0;//this is the input from the light sensor
+int currentState = 0;//this represents the current state of the blinds (ie. 0 = fully closed, 1 = partially open, 2 = fully open)
+int previousValue = 0;// represents the light value before a new light value was registered. This is used in comparison to the new one in the void loop.
 
 //2D ARRAY EXPLANATION
 //each row represents one of the three states in which the blinds/servo motor can be in. Row 1 holds values corresponding to a state of fully closed, Row 2 -> half open, Row 3 -> fully open.
@@ -20,28 +18,26 @@ int lightTable [3][3] = {
   {800,4000, 2}
 };
 
-//setting up specifications for each component
-void setup(){
+      
+void setup(){ //setting up specifications for each component
  myservo.attach(10);
  pinMode(lightSensor, INPUT);
  Serial.begin(9600);
 } 
-void loop(){ 
-  lightvalue = analogRead(lightSensor);//light value = whatever number the light sensor detects
-  Serial.println(lightvalue); //this is just for debugging; prints the current light value in console
+void loop(){//loops forever as it takes in new lightvalue every 2000 miliseconds  from the light sensor
+  lightvalue = analogRead(lightSensor);       
+  Serial.println(lightvalue);                
   
-if(lightvalue != previousValue)//if the light level changed, then run the function FindState and pass through the current light level
+if(lightvalue != previousValue)//if the light value is different from the one detected before, then there was a change in light level and call FindState               
   {
     FindState(lightvalue);
   }
   
-  previousValue = lightvalue;//the current light level is now the previous one as it will detect a new one
-  delay(2000); //just reduces the amount of times the program has to loop a bit
+  previousValue = lightvalue;                
+  delay(2000);                               
 }
-void FindState(int lightlevel)
-{
-  //for loop iterates through the 1st column of the 2D array to see what the state (column 3 of array) of the blinds should be based on the light level, and 
-  //then passes that proposed state to CheckIfDifferent  
+void FindState(int lightlevel)//iterate through the 1st column of the rows to find the corresponding ideal value/state of the blinds (column 3)
+{                                           
   for (int i = 0; i<3; i++)
   {
     if(lightlevel <= lightTable[i][0] && lightlevel > lightTable[i-1][0])
@@ -59,24 +55,23 @@ bool CheckIfDifferent(int proposedState)
   }
   else
   {
-    ChangeState(proposedState); //if the ideal state and the current state are different, then run the function ChangeState and pass in state that the blinds should be in
+    ChangeState(proposedState);//if the ideal state and the current state are different, then run the function ChangeState and pass in state that the blinds should be in
   }
 }
-void ChangeState(int newState)
+void ChangeState(int newState) 
 {
-  myservo.attach(10); //re-attach servo/ensure servo is attached. 
+  myservo.attach(10);                        
 
-  if(newState > currentState)//if the ideal state (column 3 of the array) is greater than the current one, then turn the blinds open for the time difference between the new state and the current one (column 2 of array)
+  if(newState > currentState)             
   {
     myservo.write(-180);
-    delay(lightTable[newState][1] - lightTable[currentState][1]);
+    delay(lightTable[newState][1] - lightTable[currentState][1]);//if new state is greater than current, turn the blinds open for the time difference of 2nd column of new state and 2nd column of current state.
   }
-  else //if the ideal state is less than the current one, then turn the blinds to close for the time difference of the current state and the new state.
+  else                                     
   {
     myservo.write(180);
-    delay(lightTable[currentState][1] - lightTable[newState][1]);
+    delay(lightTable[currentState][1] - lightTable[newState][1]);//if new state is less than current, turn the blinds closed direction for the time difference of the 2nd column of the current state and the 2nd column of the new state. 
   }  
-  myservo.detach();//detaches the servo to stop it from spinning completely
-  
-  currentState = newState;//now that the change is done, make the new state the current one
+  myservo.detach();                         
+  currentState = newState;                 
 }
