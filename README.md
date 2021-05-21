@@ -1,5 +1,7 @@
 # CS2-Project
 
+[TRELLO LINK](https://trello.com/b/REirOaqr/cs50-board)
+
 March 10, 2021 - i created this file and started brainstorming ideas for my project. 
 
 March 30, 2021 - familiarized myself with Arduino by creating a simple blinking light script. This allowed me to learn a lot about the syntax for coding in the Arduino IDE, as well as get an understanding for how to go about controlling a servo with an input
