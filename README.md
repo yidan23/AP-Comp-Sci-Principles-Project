@@ -1,6 +1,5 @@
 # CS2-Project
-
-[TRELLO LINK](https://trello.com/b/REirOaqr/cs50-board)
+## AP Computer Science Principles Exam Submission: Arduino controlled blinds that operate based on light level
 
 March 10, 2021 - i created this file and started brainstorming ideas for my project. 
 
